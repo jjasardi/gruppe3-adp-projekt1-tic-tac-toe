@@ -1,33 +1,30 @@
-
-/**
- * Beschreiben Sie hier die Klasse Spielfeld.
- * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
- */
 public class Spielfeld
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
-
-    /**
-     * Konstruktor für Objekte der Klasse Spielfeld
-     */
-    public Spielfeld()
-    {
-        // Instanzvariable initialisieren
-        x = 0;
+    private boolean spielerZug;
+    
+    public Spielfeld(){
+        x1=new Feld(0,0);
     }
-
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
-    {
-        // tragen Sie hier den Code ein
-        return x + y;
+   
+    public void setFeld(){
+        
     }
+    
+    public void feldSetzen(int feld)
+    {   
+        if (spielerZug == false){
+            feld= 1;
+        }    else {
+                feld= 2;
+            }
+         spielerZug=(!spielerZug);
+        }
+        
+        public void main() {   
+        System.out.println(x1+", "+x2+", "+x3);
+        System.out.println(y1+", "+y2+", "+y3);
+        System.out.println(z1+", "+z2+", "+z3);
+        System.out.println("_________________");
+    }    
 }
+

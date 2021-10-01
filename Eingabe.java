@@ -1,33 +1,19 @@
-
-/**
- * Beschreiben Sie hier die Klasse Eingabe.
- * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
- */
 public class Eingabe
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
+    private boolean spielerZug;
 
-    /**
-     * Konstruktor für Objekte der Klasse Eingabe
-     */
     public Eingabe()
     {
-        // Instanzvariable initialisieren
-        x = 0;
+        spielerZug = false;
     }
 
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
+    public void feldSetzen(int feld)
     {
-        // tragen Sie hier den Code ein
-        return x + y;
-    }
+        if (spielerZug == false){
+            feld = 1;
+        }    else {
+                feld = 2;
+            }
+         spielerZug=(!spielerZug);
+}
 }
