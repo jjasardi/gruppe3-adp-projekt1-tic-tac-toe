@@ -8,23 +8,25 @@
 public class Ausgabe
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-
+    private String sprache;
+    
 
     /**
      * Konstruktor für Objekte der Klasse Ausgabe
      */
-    public Ausgabe()
-    {
-        // Instanzvariable initialisieren
-    }
+    public Ausgabe(Sprachumschaltung sprache)
+    {   
+       this.sprache = sprache.gibSprache();
+    }   
 
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public void spielfeldAusgeben(){}
+    
+    public void spielfeldAusgeben(){
+        if(sprache == "DE") {
+            System.out.println("Sprache: Deutsch");
+        } else if (sprache == "EN") {
+            System.out.println("Language: English");
+        }
+    }
     public void spielerZug(){}
 
 }

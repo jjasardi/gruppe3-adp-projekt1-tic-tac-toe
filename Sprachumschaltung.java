@@ -18,12 +18,15 @@ public class Sprachumschaltung
         sprache = "DE";
     }
 
-    public String getSprache(){
+    public String gibSprache(){
         return sprache;
     }
     
-    public void setSprache(){
-    
-    }
-
+    public void wechsleSprache(){
+        if(sprache == "DE") {
+            sprache = "EN";
+        } else {
+            sprache = "DE";
+        }
+    } 
 }
