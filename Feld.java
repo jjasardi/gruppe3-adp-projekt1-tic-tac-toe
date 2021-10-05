@@ -1,28 +1,29 @@
 
-/**
- * Beschreiben Sie hier die Klasse Feld.
- * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
- */
+
 public class Feld
 {
-    int x;
-    int y;
-
-    public Feld(int x,int y)
+    int x1;
+    int x2;
+    int x3;
+    int y1;
+    int y2;
+    int y3;
+    int z1;
+    int z2;
+    int z3;
+    boolean spielerZug;
+    
+    public Feld()
     {
-        x=0;
-        y=0;
         }
 
 
-    public void feldSetzen(int feld)
+    public void x1()
     {
         if (spielerZug == false){
-            feld = 1;
+            x1 = 1;
         }    else {
-                feld = 2;
+                x1 = 2;
             }
          spielerZug=(!spielerZug);
     }
