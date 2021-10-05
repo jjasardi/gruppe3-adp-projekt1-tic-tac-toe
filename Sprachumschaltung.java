@@ -28,5 +28,5 @@ public class Sprachumschaltung
         } else {
             sprache = "DE";
         }
-    } 
+    }
 }
