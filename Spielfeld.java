@@ -9,6 +9,7 @@ public class Spielfeld
     private Feld z1;
     private Feld z2;
     private Feld z3;
+    private Feld a0;
     
     public Spielfeld(){
         x1= new Feld();
@@ -26,6 +27,14 @@ public class Spielfeld
     {
         Feld aktuellesFeld = getFeld(feldId);
         return aktuellesFeld.istFrei();
+    }
+
+    public boolean istFeldValide(String feldId)
+    {
+        Feld aktuellesFeld = getFeld(feldId);
+        if (aktuellesFeld == a0){
+            return false;
+        } else return true;
     }
     
     public void feldEingeben(String feldId, boolean aktuellerSpieler){
@@ -56,7 +65,7 @@ public class Spielfeld
             return z2;
         } else if (feldAuswahl == "z3"){
             return z3;
-        } else return x1; //placeholder
-    }
+        } else return a0; 
+        }
 }
 

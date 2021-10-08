@@ -19,14 +19,17 @@ public class Spiellogik
         return aktuellerSpieler;
     }
     
-        public int feldSetzen(String feld)
+    public int feldSetzen(String feldId)
     {
-        
-        if (aktuellerSpieler == false){
-            return 1;
-        } else {
-                return 2;
-        }
+        if (spielFeld.istFeldFrei(feldId) == true && spielFeld.istFeldValide(feldId) == true){
+           spielFeld.feldEingeben(feldId, aktuellerSpieler);
+           spielerWechsel();
+           return 0;  // Feld gesetzt
+        } else if (spielFeld.istFeldFrei(feldId) == false){ 
+            return 1; // Feld ist belegt
+        } else if (spielFeld.istFeldValide(feldId) == false){
+            return 2; // Feld existiert nicht
+        } else return 3;
     } 
     
     public boolean eingabePruefen(String feldId){
@@ -36,7 +39,7 @@ public class Spiellogik
             return true;
         } else{
             // ausgabe.falscheEingabe(); Todo: Methode um Fehlermeldung auszugeben,
-            // wenn man ein ungültiges Feld eingibt.
+            // wenn man ein ungï¿½ltiges Feld eingibt.
             return false;
         }
     }
