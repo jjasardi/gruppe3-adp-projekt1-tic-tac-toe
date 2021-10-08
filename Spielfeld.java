@@ -37,6 +37,7 @@ public class Spielfeld
         } else return true;
     }
     
+    // feldEingeben verändert den Wert eines bestimmten Feldes.
     public void feldEingeben(String feldId, boolean aktuellerSpieler){
         Feld aktuellesFeld = getFeld(feldId);
         if (aktuellerSpieler==false){
@@ -44,7 +45,8 @@ public class Spielfeld
         } else {aktuellesFeld.setWert(2);
         }
     }
-    
+
+    // Mit getFeld wird einem bestimmten String ein bestimmtes Feld zugewiesen.
     public Feld getFeld(String feldAuswahl)
     {
         if (feldAuswahl == "x1"){
