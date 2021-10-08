@@ -39,7 +39,7 @@ public class Spielfeld
     
     public void feldEingeben(String feldId, boolean aktuellerSpieler){
         Feld aktuellesFeld = getFeld(feldId);
-        if (aktuellerSpieler==true){
+        if (aktuellerSpieler==false){
             aktuellesFeld.setWert(1);
         } else {aktuellesFeld.setWert(2);
         }

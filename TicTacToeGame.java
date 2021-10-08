@@ -16,11 +16,10 @@ public class TicTacToeGame
     private void start(){
         Spielfeld spielfeld = new Spielfeld();
         spiellogik = new Spiellogik(spielfeld);
-        Ausgabe ausgabe = new Ausgabe();
         
     }
     
-    public void feldSetzen(String feld){
-        x1.feldEingeben(feld);
+    public void feldtest(String feldId){
+        spiellogik.feldSetzen(feldId);
     }
 }
