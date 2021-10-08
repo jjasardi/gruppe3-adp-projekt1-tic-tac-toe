@@ -1,33 +1,63 @@
-
-/**
- * Beschreiben Sie hier die Klasse Spiellogik.
- * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
- */
 public class Spiellogik
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
-
-    /**
-     * Konstruktor für Objekte der Klasse Spiellogik
-     */
-    public Spiellogik()
+    private boolean aktuellerSpieler;
+    private Spielfeld spielFeld;
+    
+    public Spiellogik(Spielfeld spielFeld)
     {
-        // Instanzvariable initialisieren
-        x = 0;
+        aktuellerSpieler = false;
+        this.spielFeld = spielFeld;
     }
 
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
+    public void spielerWechsel()
     {
-        // tragen Sie hier den Code ein
-        return x + y;
+        aktuellerSpieler=(!aktuellerSpieler);
     }
+    
+    public boolean get()
+    {
+        return aktuellerSpieler;
+    }
+    
+    public void feldEingeben(String feld, boolean spieler){
+        if (feld == "x1" ){
+            x1.feldSetzen();
+        }
+        else if (feld == "x1" ){
+                x1.feldSetzen();
+        }
+        else if (feld == "x2" ){
+                x2.feldSetzen();
+        }
+        else if (feld == "x3" ){
+                x3.feldSetzen();
+        }
+        else if (feld == "y1" ){
+                y1.feldSetzen();
+        }
+        else if (feld == "y2" ){
+                y2.feldSetzen();
+        }
+        else if (feld == "y3" ){
+                y3.feldSetzen();
+        }
+        else if (feld == "z1" ){
+                z1.feldSetzen();
+        }
+        else if (feld == "z2" ){
+                z2.feldSetzen();
+        }
+        else if (feld == "z3" ){
+                z3.feldSetzen();
+        }
+    }
+    
+        public void feldSetzen(boolean spieler)
+    {
+        if (spieler == false){
+            wert = 1;
+        }    else {
+                wert = 2;
+            }
+    } 
 }

@@ -1,23 +1,14 @@
-
-
 public class Feld
 {
-    int wert;
-    boolean spielerZug;
+    private int wert;
     
-    public Feld(int wert)
+    public Feld()
     {
         wert=0;
     }
-
-
-    public void feldSetzen()
+  
+    public int getWert()
     {
-        if (spielerZug == false){
-            wert = 1;
-        }    else {
-                wert = 2;
-            }
-         spielerZug=(!spielerZug);
-    } 
+        return wert;
+    }
 }
