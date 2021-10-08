@@ -8,18 +8,25 @@
 public class TicTacToeGame
 {
     private Spiellogik spiellogik;
+    private Spielfeld spielfeld;
     
     public TicTacToeGame(){
         start();
     }
     
     private void start(){
-        Spielfeld spielfeld = new Spielfeld();
+        spielfeld = new Spielfeld();
         spiellogik = new Spiellogik(spielfeld);
+        spielDarstellung();
         
     }
     
     public void feldtest(String feldId){
         spiellogik.feldSetzen(feldId);
+    }
+
+    public void spielDarstellung()
+    {
+        spielfeld.spielDarstellung();
     }
 }

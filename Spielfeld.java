@@ -67,5 +67,15 @@ public class Spielfeld
             return z3;
         } else return a0; 
         }
+
+    public void spielDarstellung()
+    {
+        System.out.println(x1.getWert() +" | "+ x2.getWert() +" | "+ x3.getWert());
+        System.out.println("----------");
+        System.out.println(y1.getWert() +" | "+ y2.getWert() +" | "+ y3.getWert());
+        System.out.println("----------");
+        System.out.println(z1.getWert() +" | "+ z2.getWert() +" | "+ z3.getWert());
+        System.out.println(" ");
+    }
 }
 
