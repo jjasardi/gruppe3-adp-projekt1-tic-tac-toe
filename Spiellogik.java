@@ -29,5 +29,15 @@ public class Spiellogik
         }
     } 
     
-    
+    public boolean eingabePruefen(String feldId){
+        if (feldId == "x1" || feldId == "x2" || feldId == "x3" || feldId == "y1"
+        || feldId == "y2" || feldId == "y3"
+        || feldId == "z1" || feldId == "z2" || feldId == "z3"){
+            return true;
+        } else{
+            // ausgabe.falscheEingabe(); Todo: Methode um Fehlermeldung auszugeben,
+            // wenn man ein ungültiges Feld eingibt.
+            return false;
+        }
+    }
 }
