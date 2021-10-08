@@ -9,14 +9,15 @@ public class Ausgabe
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private Sprachumschaltung sprache;
-    
 
     /**
      * Konstruktor für Objekte der Klasse Ausgabe
      */
     public Ausgabe()
+
     {
         sprache= new Sprachumschaltung();
+
     }   
 
     
@@ -28,8 +29,8 @@ public class Ausgabe
         }
     }
     
+
     public void spracheWechseln(){
         sprache.wechsleSprache();
     }
-
 }
