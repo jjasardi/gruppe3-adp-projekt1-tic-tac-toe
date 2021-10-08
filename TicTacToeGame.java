@@ -17,10 +17,10 @@ public class TicTacToeGame
         Spielfeld spielfeld = new Spielfeld();
         spiellogik = new Spiellogik(spielfeld);
         Ausgabe ausgabe = new Ausgabe();
-        ausgabe.printWelcomeText();
+        
     }
     
     public void feldSetzen(String feld){
-        spiellogik.feldStezen(feld);
+        x1.feldEingeben(feld);
     }
 }
