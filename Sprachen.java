@@ -20,19 +20,28 @@ public class Sprachen
         sprache = "DE"; // Standard auf Deutsch
         deText = new ArrayList<>();
         enText = new ArrayList<>();
-        
-    }
-
-    public String gibSprache(){
-        return sprache;
+        setArrayLists();        
     }
     
     public void wechsleSprache(){
         if(sprache == "DE") {
             sprache = "EN";
+            System.out.println(getText(6));
         } else {
             sprache = "DE";
+            System.out.println(getText(6));
         }
+    }
+    
+    public String getText(int textIndex){
+        String text = null;
+        if (sprache == "DE"){
+            text = deText.get(textIndex);
+        } else if (sprache == "EN"){
+            text = enText.get(textIndex);
+        }
+        
+        return text;
     }
     
     private void setArrayLists(){

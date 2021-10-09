@@ -13,22 +13,9 @@ public class Ausgabe
     /**
      * Konstruktor für Objekte der Klasse Ausgabe
      */
-    public Ausgabe()
-
-    {
+    public Ausgabe(){
         sprache= new Sprachen();
-
-    }   
-
-    
-    public void spielfeldAusgeben(){
-        if(sprache.gibSprache() == "DE") {
-            System.out.println("Sprache: Deutsch");
-        } else if (sprache.gibSprache() == "EN") {
-            System.out.println("Language: English");
-        }
-    }
-    
+    }  
 
     public void spracheWechseln(){
         sprache.wechsleSprache();
