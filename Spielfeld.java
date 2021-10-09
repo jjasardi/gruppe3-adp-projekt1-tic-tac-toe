@@ -21,12 +21,22 @@ public class Spielfeld
         z1= new Feld();
         z2= new Feld();
         z3= new Feld();
+        a0= new Feld();
     }
     
+    public int getWert(String feldId)
+    {
+        Feld aktuellesFeld = getFeld(feldId);
+        return aktuellesFeld.getWert();
+        
+    }
+
     public boolean istFeldFrei(String feldId)
     {
         Feld aktuellesFeld = getFeld(feldId);
-        return aktuellesFeld.istFrei();
+        if (aktuellesFeld.istFrei() == true){
+            return true;
+        } else return false;
     }
 
     public boolean istFeldValide(String feldId)
@@ -40,32 +50,31 @@ public class Spielfeld
     // feldEingeben verändert den Wert eines bestimmten Feldes.
     public void feldEingeben(String feldId, boolean aktuellerSpieler){
         Feld aktuellesFeld = getFeld(feldId);
-        if (aktuellerSpieler==false){
+        if (aktuellerSpieler == false){
             aktuellesFeld.setWert(1);
-        } else {aktuellesFeld.setWert(2);
-        }
+        } else {aktuellesFeld.setWert(2);}
     }
 
     // Mit getFeld wird einem bestimmten String ein bestimmtes Feld zugewiesen.
-    public Feld getFeld(String feldAuswahl)
+    public Feld getFeld(String feldId)
     {
-        if (feldAuswahl == "x1"){
+        if (feldId == "x1"){
             return x1;
-        } else if (feldAuswahl == "x2"){
+        } else if (feldId == "x2"){
             return x2;
-        } else if (feldAuswahl == "x3"){
+        } else if (feldId == "x3"){
             return x3;
-        } else if (feldAuswahl == "y1"){
+        } else if (feldId == "y1"){
             return y1;
-        } else if (feldAuswahl == "y2"){
+        } else if (feldId == "y2"){
             return y2;
-        } else if (feldAuswahl == "y3"){
+        } else if (feldId == "y3"){
             return y3;
-        } else if (feldAuswahl == "z1"){
+        } else if (feldId == "z1"){
             return z1;
-        } else if (feldAuswahl == "z2"){
+        } else if (feldId == "z2"){
             return z2;
-        } else if (feldAuswahl == "z3"){
+        } else if (feldId == "z3"){
             return z3;
         } else return a0; 
         }

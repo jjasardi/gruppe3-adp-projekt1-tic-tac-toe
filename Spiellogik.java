@@ -27,7 +27,7 @@ public class Spiellogik
     */
     public int feldSetzen(String feldId)
     {
-        if (spielFeld.istFeldFrei(feldId) == true && spielFeld.istFeldValide(feldId) == true){
+        if (spielFeld.istFeldValide(feldId) == true && spielFeld.istFeldFrei(feldId) == true){
            spielFeld.feldEingeben(feldId, aktuellerSpieler);
            spielerWechsel();
            return 0;  // Feld gesetzt
