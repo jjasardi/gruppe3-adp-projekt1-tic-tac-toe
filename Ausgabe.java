@@ -8,7 +8,7 @@
 public class Ausgabe
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private Sprachumschaltung sprache;
+    private Sprachen sprache;
 
     /**
      * Konstruktor für Objekte der Klasse Ausgabe
@@ -16,7 +16,7 @@ public class Ausgabe
     public Ausgabe()
 
     {
-        sprache= new Sprachumschaltung();
+        sprache= new Sprachen();
 
     }   
 
