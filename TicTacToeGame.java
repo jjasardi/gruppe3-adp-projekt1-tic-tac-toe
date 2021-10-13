@@ -7,8 +7,8 @@
  */
 public class TicTacToeGame
 {
-    private Spiellogik spiellogik;
-    private Spielfeld spielfeld;
+    private Spiellogik spielLogik;
+    private Spielfeld spielFeld;
     private Sprachen sprachen;
     
     public TicTacToeGame(){
@@ -16,29 +16,33 @@ public class TicTacToeGame
     }
     
     private void start(){
-        spielfeld = new Spielfeld();
-        spiellogik = new Spiellogik(spielfeld);
+        spielFeld = new Spielfeld();
+        spielLogik = new Spiellogik(spielFeld);
         sprachen = new Sprachen();
         //gameloop start
+        while(!spielLogik.spielUnentschieden() && spielLogik.spielGewonnen()){
+            spielDarstellung();
+            
+        }
         System.out.println(sprachen.getText(0));
         
     }
     
     public void feldtest(String feldId){
-        if (spiellogik.feldSetzen(feldId)== 0){
-            if (spiellogik.getActuellerSpieler() == false){ //wird später in andere methode verlegt
-                System.out.println(sprachen.getText(1)); //wird später in andere methode verlegt
-            }else System.out.println(sprachen.getText(2)); //wird später in andere methode verlegt
-        } else if (spiellogik.feldSetzen(feldId)== 1){
-            System.out.println(sprachen.getText(8));
-        } else if (spiellogik.feldSetzen(feldId)== 2){
-            System.out.println(sprachen.getText(7));
-        } else System.out.println ("bla");
+        // if (spiellogik.feldSetzen(feldId)== 0){
+            // if (spiellogik.getActuellerSpieler() == false){ //wird später in andere methode verlegt
+                // System.out.println(sprachen.getText(1)); //wird später in andere methode verlegt
+            // }else System.out.println(sprachen.getText(2)); //wird später in andere methode verlegt
+        // } else if (spiellogik.feldSetzen(feldId)== 1){
+            // System.out.println(sprachen.getText(8));
+        // } else if (spiellogik.feldSetzen(feldId)== 2){
+            // System.out.println(sprachen.getText(7));
+        // } else System.out.println ("bla");
     }
 
     public void spielDarstellung()
     {
-        spielfeld.spielDarstellung();
+        spielFeld.spielDarstellung();
     }
 
     public void spracheWechseln(){

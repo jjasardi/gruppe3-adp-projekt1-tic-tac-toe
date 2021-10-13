@@ -36,5 +36,13 @@ public class Spiellogik
         } else if (spielFeld.istFeldValide(feldId) == false){
             return 2; // Feld existiert nicht
         } else return 3;
-    } 
+    }
+    
+    public boolean spielUnentschieden(){
+        return spielFeld.spielUnentschieden();
+    }
+    
+    public boolean spielGewonnen(){
+        return spielFeld.spielGewonnen();
+    }
 }
