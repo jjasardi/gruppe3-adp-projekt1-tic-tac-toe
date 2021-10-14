@@ -157,5 +157,21 @@ public class Spielfeld
         else {
             return false;}
     }
+
+    /**
+     * Methode setzt alle Felder auf 0.
+     */
+    public void reset()
+    {
+        x1.setWert(0);
+        x2.setWert(0);
+        x3.setWert(0);
+        y1.setWert(0);
+        y2.setWert(0);
+        y3.setWert(0);
+        z1.setWert(0);
+        z2.setWert(0);
+        z3.setWert(0);
+    }
 }
 

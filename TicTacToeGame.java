@@ -65,4 +65,13 @@ public class TicTacToeGame
         spielLogik.feldSetzen("y1");
         spielLogik.feldSetzen("y3");
     }
+
+    /**
+     * Methode setzt alle Felder auf 0.
+     */
+    public void reset()
+    {
+        spielFeld.reset();
+        //Spielgewonnen?
+    }
 }
