@@ -1,3 +1,11 @@
+/**
+ * In der Klasse Spiellogik wird geprüft ob Operationen regelkonform sind.
+ * Hier wird 
+ * 
+ * @author sadikdur, jasard, schieph1
+ * @version 1
+ */
+
 public class Spiellogik
 {
     private int aktuellerSpieler;
@@ -5,6 +13,11 @@ public class Spiellogik
     private Sprachen sprache;
     private boolean spielBeendet;
 
+    /**
+     * Der Konstruktor lädt zwei Objekte aus anderen Klassen
+     * @param spielFeld ?
+     * @param sprache ?
+     */
     public Spiellogik(Spielfeld spielFeld, Sprachen sprache)
     {
         aktuellerSpieler = 1;
@@ -13,6 +26,9 @@ public class Spiellogik
         spielBeendet = false;
     }
 
+    /**
+     * Diese Methode wechselt zwischen Spieler 1 und 2 und gibt eine entsprechende Aussage.
+     */
     public void spielerWechsel()
     {
         if (aktuellerSpieler == 1){
@@ -25,13 +41,14 @@ public class Spiellogik
         }
     }
 
-    /*
-    Mit feldSetzen wird überprüft ob der angegebene String zu einem Feld passt und ob das Feld schon belegt ist.
-    Wenn beide Bedingungen gegeben sind, wird das Feld, abhängig vom aktuellenSpieler, auf 1 oder 2 gesetzt.
-    Anschliessend wird der Zug an den zweiten Spieler übergeben.
-    Sind die jeweiligen Bedingungen nicht gegeben, ergibt es eine entsprechende Fehlermeldung.
+    /**
+     * Die Methode feldsetzen prüft zuerst ob eine Eingabe regelkonform ist.
+     * Anschliessend verändert sie den Wert eines Feldes und stellt das Spiel dar.
+     * Daraufhin prüft die Methode ob das Spiel zu ende ist und macht entsprechende Aussagen.
+     * 
+     * @param feldId ist ein String der einem Feld mittels getFeld() aus der Klasse Spielfeld zugewiesen wird.
      */
-    public void feldSetzen(String feldId) // To Do: Code Verbessern, mit nur if, else if, else 
+    public void feldSetzen(String feldId)
     {
         if(spielFeld.istFeldFrei(feldId) == false){ 
             System.out.println(sprache.getText(8));
@@ -60,11 +77,17 @@ public class Spiellogik
             }
         }
     }
-
+    
+    /**
+     * Ueberprüft ob ein Spiel unentschieden ist.
+     */
     public boolean spielUnentschieden(){
         return spielFeld.spielUnentschieden();
     }
 
+    /**
+     * Ueberprüft ob ein Spiel gewonnne ist.
+     */
     public boolean spielGewonnen(){
         return spielFeld.spielGewonnen();
     }

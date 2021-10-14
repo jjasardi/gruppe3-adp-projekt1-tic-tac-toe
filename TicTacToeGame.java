@@ -1,16 +1,21 @@
 
 /**
- * Beschreiben Sie hier die Klasse TicTacToeGame.
+ * In der Klasse TicTacToeGame wird gespielt.
+ * Hier sind x Methoden um ein Spiel zu simulieren.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author sadikdur, jasard, schieph1
+ * @version 1
  */
+
 public class TicTacToeGame
 {
     private Spiellogik spielLogik;
     private Spielfeld spielFeld;
     private Sprachen sprache;
 
+    /**
+     * Stellt das Spielfeld auf
+     */
     public TicTacToeGame(){
         start();
     }
@@ -23,6 +28,10 @@ public class TicTacToeGame
         System.out.println(sprache.getText(1));
     }
     
+    /**
+     * Führt eine bestimmte Anzahl von Spielzügen aus und
+     * wechselt die Sprache.
+     */
     public void spielUnentschieden()
     {
         spielLogik.feldSetzen("x1");
@@ -38,5 +47,22 @@ public class TicTacToeGame
         spielLogik.feldSetzen("z2");
         spielLogik.feldSetzen("z3");
         spielLogik.feldSetzen("x3");
+    }
+
+    /**
+     * Führt eine bestimmte Anzahl von Spielzügen aus und
+     * wechselt die Sprache.
+     */
+    public void spielGewonnen1()
+    {
+        spielLogik.feldSetzen("y2");
+        spielLogik.feldSetzen("x3");
+        spielLogik.feldSetzen("x15");
+        spielLogik.feldSetzen("x1");
+        spielLogik.feldSetzen("x1");
+        sprache.wechsleSprache();
+        spielLogik.feldSetzen("z3");
+        spielLogik.feldSetzen("y1");
+        spielLogik.feldSetzen("y3");
     }
 }

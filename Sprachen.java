@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 /**
- * Beschreiben Sie hier die Klasse Sprachen.
+ * Die Klasse Sprache bildet eine Sammlung mit den Ausgabestrings in Deutsch und Englisch..
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author sadikdur, jasard, schieph1
+ * @version 1
  */
 public class Sprachen
 {
@@ -13,7 +13,7 @@ public class Sprachen
     private ArrayList<String> enText;
 
     /**
-     * Konstruktor für Objekte der Klasse Sprachen
+     * Konstruktor definiert Standardsprache, erstellt zwei neue Objekte und fÃ¼llt diese.
      */
     public Sprachen()
     {
@@ -23,6 +23,9 @@ public class Sprachen
         setArrayLists();        
     }
 
+    /**
+     * Sprache wird zwischen Deutsch und Englisch gewechselt, gibt entsprechende Aussage.
+     */
     public void wechsleSprache(){
         if(sprache == "DE") {
             sprache = "EN";
@@ -32,6 +35,11 @@ public class Sprachen
         System.out.println(getText(6));
     }
 
+    /**
+     * Ruft Zeile aus der Sammlung.
+     * @param textIndex indexwert der sammlung
+     * @return get methode fÃ¼r die englische oder deutsche Sammlung.
+     */
     public String getText(int textIndex){
         String text = null;
         if (sprache == "DE"){
@@ -43,9 +51,12 @@ public class Sprachen
         return text;
     }
 
+    /**
+     * FÃ¼llt die deutschen und englischen Arraylists mit den Spielaussagen.
+     */
     private void setArrayLists(){
         deText.add(0, "Willkommen beim Spiel Tic-Tac-Toe von der Gruppe 3. \n" +
-            "Sie können jederzeit die Sprache auf Englisch ändern mit: 'wechsleSprache.'\n" +
+            "Sie kï¿½nnen jederzeit die Sprache auf Englisch ï¿½ndern mit: 'wechsleSprache.'\n" +
             "\n" +
             "Einleitung: \n" +
             "\n" +
@@ -55,7 +66,7 @@ public class Sprachen
             "---------- \n" +
             "z1 | z2 | z3 \n" +
             "\n" +
-            "Sind die Koordinaten für die Eingabe wo sie ihren 'Stein' setzen wollen." +
+            "Sind die Koordinaten fï¿½r die Eingabe wo sie ihren 'Stein' setzen wollen." +
             "\n" +
             "Spieler 1 setzt eine 1 in Spielfeld, \n" +
             "Spieler 2 setzt eine 2. \n" +
@@ -67,8 +78,8 @@ public class Sprachen
         deText.add(4, "Spieler 2 hat gewonnen, Gratulation!");
         deText.add(5, "Unentschieden!");
         deText.add(6, "Sie haben erfolgreich die Sprache auf Deutsch gewechselt.");
-        deText.add(7, "Das ist keine gültige Eingabe für die Koordinaten.");
-        deText.add(8, "Feld ist schon besetzt wählen Sie ein anderes.");
+        deText.add(7, "Das ist keine gï¿½ltige Eingabe fï¿½r die Koordinaten.");
+        deText.add(8, "Feld ist schon besetzt wï¿½hlen Sie ein anderes.");
 
         enText.add(0, "Welcome to the game tic-tac-toe from group 3. \n" +
             "You can change the language to German at any time with: 'wechsleSprache.'\n" +
