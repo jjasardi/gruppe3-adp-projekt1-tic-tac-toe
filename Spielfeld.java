@@ -32,7 +32,7 @@ public class Spielfeld
     public boolean istFeldFrei(String feldId)
     {
         Feld aktuellesFeld = getFeld(feldId);
-        if (aktuellesFeld.istFrei() == true){
+        if (aktuellesFeld.getWert() == 0){
             return true;
         } else return false;
     }
