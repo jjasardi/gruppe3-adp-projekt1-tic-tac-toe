@@ -14,17 +14,19 @@ public class Feld
         wert=0;
     }
 
+    /**
+     * Die Methode getWert() holt den wert für übergordnete Klassen.
+     */
     public int getWert()
     {
         return wert;
     }
 
     /**
+     * Die Methode setWert() verändert den int wert.
      * 
-     * 
-     * @param   wert    
+     * @param   wert    Vorgesehen ist 0, 1 oder 2. Andere Werte werden mit übergeordneten Methoden ausgefiltert.
      */
-
     public void setWert(int wert)
     {
         this.wert = wert;

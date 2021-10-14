@@ -22,12 +22,24 @@ public class Spielfeld
         z3= new Feld();
     }
 
+    /**
+     * Die Methode getWert() liefert den int eines Feldes.
+     * 
+     * @param   feldId    ist ein String der einem Feld mittels getFeld() zugewiesen wird.
+     */
+
     public int getWert(String feldId)
     {
         Feld aktuellesFeld = getFeld(feldId);
         return aktuellesFeld.getWert();
 
     }
+
+    /**
+     * Die Methode istFeldFrei prüft ob ein Feld schon besetzt ist. 
+     * 
+     * @param   feldId    ist ein String der einem Feld mittels getFeld() zugewiesen wird.
+     */
 
     public boolean istFeldFrei(String feldId)
     {
@@ -37,6 +49,12 @@ public class Spielfeld
         } else return false;
     }
 
+    /**
+     * Die Methode istFeldValide prüft ob der eingegebe String in getFeld() vorgesehen ist. 
+     * 
+     * @param   feldId    ist ein String der einem Feld mittels getFeld() zugewiesen wird.
+     */
+
     public boolean istFeldValide(String feldId)
     {
         Feld aktuellesFeld = getFeld(feldId);
@@ -45,7 +63,13 @@ public class Spielfeld
         } else return true;
     }
 
-    // feldEingeben verändert den Wert eines bestimmten Feldes.
+    /**
+     * Die Methode feldEingeben ändert den Wert eines Feldes zu 1 für Spieler 1, oder zu 2 für Spieler 2.
+     * 
+     * @param   feldId    ist ein String der einem Feld mittels getFeld() zugewiesen wird.
+     * @param   aktuellerSpieler false steht für Spieler 1, true für Spieler 2.
+     */
+
     public void feldEingeben(String feldId, boolean aktuellerSpieler){
         Feld aktuellesFeld = getFeld(feldId);
         if (aktuellerSpieler == false){
@@ -53,7 +77,12 @@ public class Spielfeld
         } else {aktuellesFeld.setWert(2);}
     }
 
-    // Mit getFeld wird einem bestimmten String ein bestimmtes Feld zugewiesen.
+    /**
+     * Die Methode istFeldValide prüft ob der eingegebe String in getFeld() vorgesehen ist. 
+     * 
+     * @param   feldId    ist ein String der einem Feld mittels getFeld() zugewiesen wird.
+     */
+
     public Feld getFeld(String feldId)
     {
         if (feldId == "x1"){
@@ -77,6 +106,8 @@ public class Spielfeld
         } else return null; 
     }
 
+    
+    //Die Methode spielDarstellung() visualisiert das aktuelle Spielfeld.
     public void spielDarstellung()
     {
         System.out.println(x1.getWert() +" | "+ x2.getWert() +" | "+ x3.getWert());
@@ -87,6 +118,7 @@ public class Spielfeld
         System.out.println(" ");
     }
 
+    // Die Methode spielUnentschieden() prüft ob alle Felder mit nicht Nullen besetzt sind.
     public boolean spielUnentschieden(){
         if (x1.getWert() != 0 && x2.getWert() != 0 && x3.getWert() != 0 &&
         z1.getWert() != 0 && z2.getWert() != 0 && z3.getWert() != 0 &&
