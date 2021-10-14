@@ -9,7 +9,7 @@ public class TicTacToeGame
 {
     private Spiellogik spielLogik;
     private Spielfeld spielFeld;
-    private Sprachen sprachen;
+    private Sprachen sprache;
 
     public TicTacToeGame(){
         start();
@@ -17,36 +17,26 @@ public class TicTacToeGame
 
     private void start(){
         spielFeld = new Spielfeld();
-        spielLogik = new Spiellogik(spielFeld);
-        sprachen = new Sprachen();
-
-        System.out.println(sprachen.getText(0));
-        //gameloop start
-        while(!spielLogik.spielUnentschieden() && !spielLogik.spielGewonnen()){
-            spracheWechseln();
-            spielDarstellung();
-            spielLogik.feldSetzen("x1");
-        }
+        sprache = new Sprachen();
+        spielLogik = new Spiellogik(spielFeld, sprache);
+        System.out.println(sprache.getText(0));
+        System.out.println(sprache.getText(1));
     }
-
-    public void feldtest(String feldId){
-        // if (spiellogik.feldSetzen(feldId)== 0){
-        // if (spiellogik.getActuellerSpieler() == false){ //wird später in andere methode verlegt
-        // System.out.println(sprachen.getText(1)); //wird später in andere methode verlegt
-        // }else System.out.println(sprachen.getText(2)); //wird später in andere methode verlegt
-        // } else if (spiellogik.feldSetzen(feldId)== 1){
-        // System.out.println(sprachen.getText(8));
-        // } else if (spiellogik.feldSetzen(feldId)== 2){
-        // System.out.println(sprachen.getText(7));
-        // } else System.out.println ("bla");
-    }
-
-    public void spielDarstellung()
+    
+    public void spielUnentschieden()
     {
-        spielFeld.spielDarstellung();
-    }
-
-    public void spracheWechseln(){
-        sprachen.wechsleSprache();
+        spielLogik.feldSetzen("x1");
+        spielLogik.feldSetzen("y2");
+        sprache.wechsleSprache();
+        spielLogik.feldSetzen("z1");
+        spielLogik.feldSetzen("z1");
+        spielLogik.feldSetzen("y1");
+        spielLogik.feldSetzen("y3");
+        spielLogik.feldSetzen("x2");
+        sprache.wechsleSprache();
+        spielLogik.feldSetzen("x2");
+        spielLogik.feldSetzen("z2");
+        spielLogik.feldSetzen("z3");
+        spielLogik.feldSetzen("x3");
     }
 }

@@ -1,24 +1,28 @@
 public class Spiellogik
 {
-    private boolean aktuellerSpieler;
+    private int aktuellerSpieler;
     private Spielfeld spielFeld;
     private Sprachen sprache;
+    private boolean spielBeendet;
 
-    public Spiellogik(Spielfeld spielFeld)
+    public Spiellogik(Spielfeld spielFeld, Sprachen sprache)
     {
-        aktuellerSpieler = false;
-        sprache = new Sprachen();
+        aktuellerSpieler = 1;
+        this.sprache = sprache;
         this.spielFeld = spielFeld;
+        spielBeendet = false;
     }
 
     public void spielerWechsel()
     {
-        aktuellerSpieler=(!aktuellerSpieler);
-    }
-
-    public boolean getActuellerSpieler()
-    {
-        return aktuellerSpieler;
+        if (aktuellerSpieler == 1){
+            aktuellerSpieler = 2;
+            System.out.println(sprache.getText(2));
+        }
+        else {
+            aktuellerSpieler = 1;
+            System.out.println(sprache.getText(1));
+        }
     }
 
     /*
@@ -29,28 +33,39 @@ public class Spiellogik
      */
     public void feldSetzen(String feldId) // To Do: Code Verbessern, mit nur if, else if, else 
     {
-        if (spielFeld.istFeldValide(feldId) == true && spielFeld.istFeldFrei(feldId) == true){
-            spielFeld.feldEingeben(feldId, aktuellerSpieler);
-            spielerWechsel();
-        } else if (spielFeld.istFeldFrei(feldId) == false){ 
+        if(spielFeld.istFeldFrei(feldId) == false){ 
             System.out.println(sprache.getText(8));
-        } else if (spielFeld.istFeldValide(feldId) == false){
+        }
+        else if (spielFeld.istFeldValide(feldId) == false){
             System.out.println(sprache.getText(7));
+        }
+        else{
+            spielFeld.feldEingeben(feldId, aktuellerSpieler);
+            spielFeld.spielDarstellung();
+            if(spielGewonnen()){
+                if (aktuellerSpieler == 1){
+                    System.out.println(sprache.getText(3));
+                }
+                else{
+                    System.out.println(sprache.getText(4));
+                }
+                spielBeendet = true;
+            }
+            else if (spielUnentschieden()){
+                System.out.println(sprache.getText(5));
+                spielBeendet = true;
+            }
+            if (!spielBeendet){
+                spielerWechsel();
+            }
         }
     }
 
     public boolean spielUnentschieden(){
-        System.out.println(sprache.getText(5));
         return spielFeld.spielUnentschieden();
     }
 
     public boolean spielGewonnen(){
-        if (aktuellerSpieler == false){
-            System.out.println(sprache.getText(3));
-        }
-        if (aktuellerSpieler == true){
-            System.out.println(sprache.getText(4));
-        }
         return spielFeld.spielGewonnen();
     }
 }

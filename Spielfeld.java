@@ -70,11 +70,9 @@ public class Spielfeld
      * @param   aktuellerSpieler false steht für Spieler 1, true für Spieler 2.
      */
 
-    public void feldEingeben(String feldId, boolean aktuellerSpieler){
+    public void feldEingeben(String feldId, int aktuellerSpieler){
         Feld aktuellesFeld = getFeld(feldId);
-        if (aktuellerSpieler == false){
-            aktuellesFeld.setWert(1);
-        } else {aktuellesFeld.setWert(2);}
+        aktuellesFeld.setWert(aktuellerSpieler);
     }
 
     /**
@@ -129,28 +127,28 @@ public class Spielfeld
     }
 
     public boolean spielGewonnen(){
-        if (x1.getWert() == x2.getWert() && x2.getWert() == x3.getWert()){
+        if (x1.getWert() != 0 && x1.getWert() == x2.getWert() && x2.getWert() == x3.getWert()){
             return true;
         }
-        else if(z1.getWert() == z2.getWert() && z2.getWert() == z3.getWert()){
+        else if(z1.getWert() != 0 && z1.getWert() == z2.getWert() && z2.getWert() == z3.getWert()){
             return true;
         }
-        else if(y1.getWert() == y2.getWert() && y2.getWert() == y3.getWert()){
+        else if(y1.getWert() != 0 && y1.getWert() == y2.getWert() && y2.getWert() == y3.getWert()){
             return true;
         }
-        else if (x1.getWert() == z1.getWert() && z1.getWert() == y1.getWert()){
+        else if (x1.getWert() != 0 && x1.getWert() == z1.getWert() && z1.getWert() == y1.getWert()){
             return true;
         }
-        else if(x2.getWert() == z2.getWert() && z2.getWert() == y2.getWert()){
+        else if(x2.getWert() != 0 && x2.getWert() == z2.getWert() && z2.getWert() == y2.getWert()){
             return true;
         }
-        else if (x3.getWert() == z3.getWert() && z3.getWert() == y3.getWert()){
+        else if (x3.getWert() != 0 && x3.getWert() == z3.getWert() && z3.getWert() == y3.getWert()){
             return true;
         }
-        else if (x1.getWert() == z2.getWert() && z2.getWert() == y3.getWert()){
+        else if (x1.getWert() != 0 && x1.getWert() == y2.getWert() && y2.getWert() == z3.getWert()){
             return true;
         }
-        else if (x3.getWert() == z2.getWert() && z2.getWert() == y1.getWert()){
+        else if (x3.getWert() != 0 && x3.getWert() == y2.getWert() && y2.getWert() == z1.getWert()){
             return true;
         }
         else {

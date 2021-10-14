@@ -60,7 +60,7 @@ public class Sprachen
             "Spieler 1 setzt eine 1 in Spielfeld, \n" +
             "Spieler 2 setzt eine 2. \n" +
             "\n" +
-            "Viel Spass beim Spielen!");
+            "Viel Spass beim Spielen! \n");
         deText.add(1, "Spieler 1 ist am Zug.");
         deText.add(2, "Spieler 2 ist am Zug.");
         deText.add(3, "Spieler 1 hat gewonnen, Gratulation!");
@@ -86,7 +86,7 @@ public class Sprachen
             "Player 1 places a 1 on the field, \n" +
             "Player 2 places a 2. \n" +
             "\n" +
-            "Have fun playing!");
+            "Have fun playing! \n");
         enText.add(1, "It is player 1's turn.");
         enText.add(2, "It is player 2's turn.");
         enText.add(3, "Player 1 won, congratulations!");
