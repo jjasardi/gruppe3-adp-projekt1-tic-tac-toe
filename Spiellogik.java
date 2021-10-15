@@ -58,8 +58,9 @@ public class Spiellogik
         }
         else{
             if (spielBeendet == false) {
-            spielFeld.feldEingeben(feldId, aktuellerSpieler);
-            spielFeld.spielDarstellung();
+                spielFeld.feldEingeben(feldId, aktuellerSpieler);
+                spielFeld.spielDarstellung();
+            }
             if(spielGewonnen()){
                 if (aktuellerSpieler == 1){
                     System.out.println(sprache.getText(3));
@@ -69,14 +70,13 @@ public class Spiellogik
                 }
                 spielBeendet = true;
             }
-            }
             else if (spielUnentschieden()){
                 System.out.println(sprache.getText(5));
                 spielBeendet = true;
             }
             if (!spielBeendet){
                 spielerWechsel();
-            }
+            }   
         }
     }
     
