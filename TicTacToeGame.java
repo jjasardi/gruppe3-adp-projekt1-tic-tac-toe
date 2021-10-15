@@ -31,7 +31,7 @@ public class TicTacToeGame
     }
     
     /**
-     * Führt eine bestimmte Anzahl von Spielzuegen aus und
+     * Fuehrt eine bestimmte Anzahl von Spielzuegen aus und
      * wechselt die Sprache.
      */
     public void spielUnentschieden()
@@ -53,10 +53,10 @@ public class TicTacToeGame
     }
 
     /**
-     * Führt eine bestimmte Anzahl von Spielzügen aus und
+     * Fuehrt eine bestimmte Anzahl von Spielzuegen aus und
      * wechselt die Sprache.
      */
-    public void spielGewonnen1()
+    public void spieler1Gewinnt()
     {
         start();
         spielLogik.feldSetzen("y2");
@@ -66,15 +66,16 @@ public class TicTacToeGame
         spielLogik.feldSetzen("x1");
         sprache.wechsleSprache();
         spielLogik.feldSetzen("z3");
-        spielLogik.feldSetzen("y1");
         spielLogik.feldSetzen("y3");
+        spielLogik.feldSetzen("z1");
+        spielLogik.feldSetzen("y1");
     }
 
     /**
-     * Führt eine bestimmte Anzahl von Spielzügen aus und
+     * Fuehrt eine bestimmte Anzahl von Spielzuegen aus und
      * wechselt die Sprache.
      */
-    public void spielGewonnen2()
+    public void spieler2Gewinnt()
     {
         start();
         spielLogik.feldSetzen("y2");
@@ -90,6 +91,5 @@ public class TicTacToeGame
         spielLogik.feldSetzen("x3");
         spielLogik.feldSetzen("z2");
         spielLogik.feldSetzen("x2");
-        spielLogik.feldSetzen("z3");
     }
 }
