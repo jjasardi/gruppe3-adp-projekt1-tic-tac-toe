@@ -19,6 +19,9 @@ public class TicTacToeGame
     public TicTacToeGame(){
     }
 
+    /**
+     * Die Methode erstellt 3 neue Objekte und gibt zwei Ausgaben (Willkomensnachricht und welcher Spieler am Zug ist) aus 
+     */
     private void start(){
         spielFeld = new Spielfeld();
         sprache = new Sprachen();
@@ -67,6 +70,10 @@ public class TicTacToeGame
         spielLogik.feldSetzen("y3");
     }
 
+    /**
+     * Führt eine bestimmte Anzahl von Spielzügen aus und
+     * wechselt die Sprache.
+     */
     public void spielGewonnen2()
     {
         start();
