@@ -14,12 +14,12 @@ public class TicTacToeGame
     private Sprachen sprache;
 
     /**
-     * Stellt das Spielfeld auf
+     * Leerer Konstruktor.
      */
     public TicTacToeGame(){
     }
 
-    public void start(){
+    private void start(){
         spielFeld = new Spielfeld();
         sprache = new Sprachen();
         spielLogik = new Spiellogik(spielFeld, sprache);
