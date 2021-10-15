@@ -50,14 +50,14 @@ public class Spiellogik
      */
     public void feldSetzen(String feldId)
     {
-        if(spielFeld.istFeldFrei(feldId) == false){ 
-            System.out.println(sprache.getText(8));
-        }
-        else if (spielFeld.istFeldValide(feldId) == false){
-            System.out.println(sprache.getText(7));
-        }
-        else{
-            if (spielBeendet == false) {
+        if (spielBeendet == false) {
+            if(spielFeld.istFeldFrei(feldId) == false){ 
+                System.out.println(sprache.getText(8));
+            }
+            else if (spielFeld.istFeldValide(feldId) == false){
+                System.out.println(sprache.getText(7));
+            }
+            else{
                 spielFeld.feldEingeben(feldId, aktuellerSpieler);
                 spielFeld.spielDarstellung();
 
