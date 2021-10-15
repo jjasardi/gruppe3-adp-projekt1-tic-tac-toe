@@ -1,5 +1,5 @@
 /**
- * In der Klasse Spiellogik wird geprüft ob Operationen regelkonform sind.
+ * In der Klasse Spiellogik wird geprueft ob Operationen regelkonform sind.
  * Hier wird der Spielerzug gewechselt und entschieden ob das Spiel zu Ende ist. 
  * 
  * @author sadikdur, jasard, schieph1
@@ -42,9 +42,9 @@ public class Spiellogik
     }
 
     /**
-     * Die Methode feldsetzen prüft zuerst ob eine Eingabe regelkonform ist.
+     * Die Methode feldsetzen prueft zuerst ob eine Eingabe regelkonform ist.
      * Anschliessend verändert sie den Wert eines Feldes und stellt das Spiel dar.
-     * Daraufhin prüft die Methode ob das Spiel zu ende ist und macht entsprechende Aussagen.
+     * Daraufhin prueft die Methode ob das Spiel zu ende ist und macht entsprechende Aussagen.
      * 
      * @param feldId ist ein String der einem Feld mittels getFeld() aus der Klasse Spielfeld zugewiesen wird.
      */
@@ -82,14 +82,14 @@ public class Spiellogik
     }
 
     /**
-     * Ueberprüft ob ein Spiel unentschieden ist.
+     * Ueberprueft ob ein Spiel unentschieden ist.
      */
     public boolean spielUnentschieden(){
         return spielFeld.spielUnentschieden();
     }
 
     /**
-     * Ueberprüft ob ein Spiel gewonnne ist.
+     * Ueberprueft ob ein Spiel gewonnne ist.
      */
     public boolean spielGewonnen(){
         return spielFeld.spielGewonnen();

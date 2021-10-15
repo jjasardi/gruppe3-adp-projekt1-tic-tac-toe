@@ -13,7 +13,7 @@ public class Sprachen
     private ArrayList<String> enText;
 
     /**
-     * Konstruktor definiert Standardsprache, erstellt zwei neue Objekte und füllt diese.
+     * Konstruktor definiert Standardsprache, erstellt zwei neue Objekte und fuellt diese.
      */
     public Sprachen()
     {
@@ -38,7 +38,7 @@ public class Sprachen
     /**
      * Ruft Zeile aus der Sammlung.
      * @param textIndex indexwert der sammlung
-     * @return get methode für die englische oder deutsche Sammlung.
+     * @return get methode fuer die englische oder deutsche Sammlung.
      */
     public String getText(int textIndex){
         String text = null;

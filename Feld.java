@@ -18,7 +18,7 @@ public class Feld
     }
 
     /**
-     * Die Methode getzustand() holt den zustand für übergordnete Klassen.
+     * Die Methode getzustand() holt den zustand fuer uebergordnete Klassen.
      * @return zustand als int
      */
     public int getZustand()
@@ -29,7 +29,7 @@ public class Feld
     /**
      * Die Methode setZustand() verändert den int zustand.
      * 
-     * @param zustand Vorgesehen ist 0, 1 oder 2. Andere zustande werden mit übergeordneten Methoden ausgefiltert.
+     * @param zustand Vorgesehen ist 0, 1 oder 2. Andere zustande werden mit uebergeordneten Methoden ausgefiltert.
      */
     public void setZustand(int zustand)
     {

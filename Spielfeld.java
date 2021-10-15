@@ -1,5 +1,5 @@
 /**
- * In der Klasse Spielfeld werden die Werte für die Felder veraendert.
+ * In der Klasse Spielfeld werden die Werte fuer die Felder veraendert.
  * Hier wird geprueft wer gewonnen hat. Hier ist die Methode um das Spielfeld darzustellen.
  * Das Spielfeld sieht folgendermassen aus: 
  * String ist Zeile und int die Spalte.
@@ -28,7 +28,7 @@ public class Spielfeld
     private Feld a0;
 
     /**
-     * Konstruktor erstellt 9 neue Objekte für das Spielfeld und ein extra Feld für Fehlermeldungen.
+     * Konstruktor erstellt 9 neue Objekte fuer das Spielfeld und ein extra Feld fuer Fehlermeldungen.
      */
     public Spielfeld(){
         x1= new Feld();
@@ -44,7 +44,7 @@ public class Spielfeld
     }
 
     /**
-     * Die Methode istFeldFrei prüft ob ein Feld schon besetzt ist. 
+     * Die Methode istFeldFrei prueft ob ein Feld schon besetzt ist. 
      * 
      * @param feldId ist ein String der einem Feld mittels getFeld() zugewiesen wird.
      */
@@ -57,7 +57,7 @@ public class Spielfeld
     }
 
     /**
-     * Die Methode istFeldValide prüft ob der eingegebe String in getFeld() vorgesehen ist. 
+     * Die Methode istFeldValide prueft ob der eingegebe String in getFeld() vorgesehen ist. 
      * 
      * @param   feldId    ist ein String der einem Feld mittels getFeld() zugewiesen wird.
      */
@@ -70,10 +70,10 @@ public class Spielfeld
     }
 
     /**
-     * Die Methode feldEingeben ändert den Wert eines Feldes zu 1 für Spieler 1, oder zu 2 für Spieler 2.
+     * Die Methode feldEingeben ändert den Wert eines Feldes zu 1 fuer Spieler 1, oder zu 2 fuer Spieler 2.
      * 
      * @param   feldId    ist ein String der einem Feld mittels getFeld() zugewiesen wird.
-     * @param   aktuellerSpieler 1 steht für Spieler 1, 2 für Spieler 2.
+     * @param   aktuellerSpieler 1 steht fuer Spieler 1, 2 fuer Spieler 2.
      */
     public void feldEingeben(String feldId, int aktuellerSpieler){
         Feld aktuellesFeld = getFeld(feldId);
@@ -81,7 +81,7 @@ public class Spielfeld
     }
 
     /**
-     * Die Methode istFeldValide prüft ob der eingegebe String in getFeld() vorgesehen ist. 
+     * Die Methode istFeldValide prueft ob der eingegebe String in getFeld() vorgesehen ist. 
      * 
      * @param feldId ist ein String der einem Feld mittels getFeld() zugewiesen wird.
      */
@@ -123,7 +123,7 @@ public class Spielfeld
     }
 
     /**
-     * Die Methode prüft ob es Unentschieden ist.
+     * Die Methode prueft ob es Unentschieden ist.
      */
     public boolean spielUnentschieden(){
         if (x1.getZustand() != 0 && x2.getZustand() != 0 && x3.getZustand() != 0 &&
@@ -135,7 +135,7 @@ public class Spielfeld
     }
 
     /**
-     * Diese Methode prüft alle möglichen Siegesbedingungen.
+     * Diese Methode prueft alle moeglichen Siegesbedingungen.
      */
     public boolean spielGewonnen(){
         if (x1.getZustand() != 0 && x1.getZustand() == x2.getZustand() && x2.getZustand() == x3.getZustand()){
