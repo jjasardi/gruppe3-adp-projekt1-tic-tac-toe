@@ -7,32 +7,32 @@
 
 public class Feld
 {
-    private int wert;
+    private int zustand;
 
     /**
-     * Konstruktor setzt wert auf 0.
+     * Konstruktor setzt zustand auf 0.
      */
     public Feld()
     {
-        wert=0;
+        zustand=0;
     }
 
     /**
-     * Die Methode getWert() holt den wert für übergordnete Klassen.
-     * @return wert als int
+     * Die Methode getzustand() holt den zustand für übergordnete Klassen.
+     * @return zustand als int
      */
-    public int getWert()
+    public int getZustand()
     {
-        return wert;
+        return zustand;
     }
 
     /**
-     * Die Methode setWert() verändert den int wert.
+     * Die Methode setZustand() verändert den int zustand.
      * 
-     * @param wert Vorgesehen ist 0, 1 oder 2. Andere Werte werden mit übergeordneten Methoden ausgefiltert.
+     * @param zustand Vorgesehen ist 0, 1 oder 2. Andere zustande werden mit übergeordneten Methoden ausgefiltert.
      */
-    public void setWert(int wert)
+    public void setZustand(int zustand)
     {
-        this.wert = wert;
+        this.zustand = zustand;
     }
 }

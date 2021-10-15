@@ -1,6 +1,14 @@
 /**
- * In der Klasse Spielfeld werden die Werte für die Felder verändert.
- * Hier wird geprüft wer gewonnen hat. Hier ist die Methode um das Spielfeld darzustellen.
+ * In der Klasse Spielfeld werden die Werte für die Felder veraendert.
+ * Hier wird geprueft wer gewonnen hat. Hier ist die Methode um das Spielfeld darzustellen.
+ * Das Spielfeld sieht folgendermassen aus: 
+ * String ist Zeile und int die Spalte.
+ * 
+ *          x1 | x2 | x3 
+            ------------ 
+            y1 | y2 | y3 
+            ------------ 
+            z1 | z2 | z3 
  * 
  * @author sadikdur, jasard, schieph1
  * @version 1
@@ -43,7 +51,7 @@ public class Spielfeld
     public boolean istFeldFrei(String feldId)
     {
         Feld aktuellesFeld = getFeld(feldId);
-        if (aktuellesFeld.getWert() == 0){
+        if (aktuellesFeld.getZustand() == 0){
             return true;
         } else return false;
     }
@@ -69,7 +77,7 @@ public class Spielfeld
      */
     public void feldEingeben(String feldId, int aktuellerSpieler){
         Feld aktuellesFeld = getFeld(feldId);
-        aktuellesFeld.setWert(aktuellerSpieler);
+        aktuellesFeld.setZustand(aktuellerSpieler);
     }
 
     /**
@@ -106,11 +114,11 @@ public class Spielfeld
     public void spielDarstellung()
     {
         System.out.println(" ");
-        System.out.println(x1.getWert() +" | "+ x2.getWert() +" | "+ x3.getWert());
+        System.out.println(x1.getZustand() +" | "+ x2.getZustand() +" | "+ x3.getZustand());
         System.out.println("----------");
-        System.out.println(y1.getWert() +" | "+ y2.getWert() +" | "+ y3.getWert());
+        System.out.println(y1.getZustand() +" | "+ y2.getZustand() +" | "+ y3.getZustand());
         System.out.println("----------");
-        System.out.println(z1.getWert() +" | "+ z2.getWert() +" | "+ z3.getWert());
+        System.out.println(z1.getZustand() +" | "+ z2.getZustand() +" | "+ z3.getZustand());
         System.out.println(" ");
     }
 
@@ -118,9 +126,9 @@ public class Spielfeld
      * Die Methode prüft ob es Unentschieden ist.
      */
     public boolean spielUnentschieden(){
-        if (x1.getWert() != 0 && x2.getWert() != 0 && x3.getWert() != 0 &&
-        z1.getWert() != 0 && z2.getWert() != 0 && z3.getWert() != 0 &&
-        y1.getWert() != 0 && y2.getWert() != 0 && y3.getWert() != 0){
+        if (x1.getZustand() != 0 && x2.getZustand() != 0 && x3.getZustand() != 0 &&
+        z1.getZustand() != 0 && z2.getZustand() != 0 && z3.getZustand() != 0 &&
+        y1.getZustand() != 0 && y2.getZustand() != 0 && y3.getZustand() != 0){
             return true;
         }
         else return false;
@@ -130,48 +138,32 @@ public class Spielfeld
      * Diese Methode prüft alle möglichen Siegesbedingungen.
      */
     public boolean spielGewonnen(){
-        if (x1.getWert() != 0 && x1.getWert() == x2.getWert() && x2.getWert() == x3.getWert()){
+        if (x1.getZustand() != 0 && x1.getZustand() == x2.getZustand() && x2.getZustand() == x3.getZustand()){
             return true;
         }
-        else if(z1.getWert() != 0 && z1.getWert() == z2.getWert() && z2.getWert() == z3.getWert()){
+        else if(z1.getZustand() != 0 && z1.getZustand() == z2.getZustand() && z2.getZustand() == z3.getZustand()){
             return true;
         }
-        else if(y1.getWert() != 0 && y1.getWert() == y2.getWert() && y2.getWert() == y3.getWert()){
+        else if(y1.getZustand() != 0 && y1.getZustand() == y2.getZustand() && y2.getZustand() == y3.getZustand()){
             return true;
         }
-        else if (x1.getWert() != 0 && x1.getWert() == z1.getWert() && z1.getWert() == y1.getWert()){
+        else if (x1.getZustand() != 0 && x1.getZustand() == z1.getZustand() && z1.getZustand() == y1.getZustand()){
             return true;
         }
-        else if(x2.getWert() != 0 && x2.getWert() == z2.getWert() && z2.getWert() == y2.getWert()){
+        else if(x2.getZustand() != 0 && x2.getZustand() == z2.getZustand() && z2.getZustand() == y2.getZustand()){
             return true;
         }
-        else if (x3.getWert() != 0 && x3.getWert() == z3.getWert() && z3.getWert() == y3.getWert()){
+        else if (x3.getZustand() != 0 && x3.getZustand() == z3.getZustand() && z3.getZustand() == y3.getZustand()){
             return true;
         }
-        else if (x1.getWert() != 0 && x1.getWert() == y2.getWert() && y2.getWert() == z3.getWert()){
+        else if (x1.getZustand() != 0 && x1.getZustand() == y2.getZustand() && y2.getZustand() == z3.getZustand()){
             return true;
         }
-        else if (x3.getWert() != 0 && x3.getWert() == y2.getWert() && y2.getWert() == z1.getWert()){
+        else if (x3.getZustand() != 0 && x3.getZustand() == y2.getZustand() && y2.getZustand() == z1.getZustand()){
             return true;
         }
         else {
             return false;}
-    }
-
-    /**
-     * Methode setzt alle Felder auf 0.
-     */
-    public void reset()
-    {
-        x1.setWert(0);
-        x2.setWert(0);
-        x3.setWert(0);
-        y1.setWert(0);
-        y2.setWert(0);
-        y3.setWert(0);
-        z1.setWert(0);
-        z2.setWert(0);
-        z3.setWert(0);
     }
 }
 

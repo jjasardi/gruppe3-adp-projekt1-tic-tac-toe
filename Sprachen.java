@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 /**
- * Die Klasse Sprache bildet eine Sammlung mit den Ausgabestrings in Deutsch und Englisch..
+ * Die Klasse Sprache bildet eine Sammlung mit den Ausgabestrings in Deutsch und Englisch.
  * 
  * @author sadikdur, jasard, schieph1
  * @version 1
@@ -17,7 +17,7 @@ public class Sprachen
      */
     public Sprachen()
     {
-        sprache = "DE"; // Standard auf Deutsch
+        sprache = "DE";
         deText = new ArrayList<>();
         enText = new ArrayList<>();
         setArrayLists();        
@@ -52,21 +52,21 @@ public class Sprachen
     }
 
     /**
-     * Füllt die deutschen und englischen Arraylists mit den Spielaussagen.
+     * Fuellt die deutschen und englischen Arraylists mit den Spielaussagen.
      */
     private void setArrayLists(){
         deText.add(0, "Willkommen beim Spiel Tic-Tac-Toe von der Gruppe 3. \n" +
-            "Sie k�nnen jederzeit die Sprache auf Englisch �ndern mit: 'wechsleSprache.'\n" +
+            "Sie koennen jederzeit die Sprache auf Englisch aendern mit: 'wechsleSprache.'\n" +
             "\n" +
             "Einleitung: \n" +
             "\n" +
             "x1 | x2 | x3 \n" +
-            "---------- \n" +
+            "------------ \n" +
             "y1 | y2 | y3 \n" +
-            "---------- \n" +
+            "------------ \n" +
             "z1 | z2 | z3 \n" +
             "\n" +
-            "Sind die Koordinaten f�r die Eingabe wo sie ihren 'Stein' setzen wollen." +
+            "Sind die Koordinaten fuer die Eingabe wo sie ihren 'Stein' setzen wollen." +
             "\n" +
             "Spieler 1 setzt eine 1 in Spielfeld, \n" +
             "Spieler 2 setzt eine 2. \n" +
@@ -78,8 +78,8 @@ public class Sprachen
         deText.add(4, "Spieler 2 hat gewonnen, Gratulation!");
         deText.add(5, "Unentschieden!");
         deText.add(6, "Sie haben erfolgreich die Sprache auf Deutsch gewechselt.");
-        deText.add(7, "Das ist keine g�ltige Eingabe f�r die Koordinaten.");
-        deText.add(8, "Feld ist schon besetzt w�hlen Sie ein anderes.");
+        deText.add(7, "Das ist keine gueltige Eingabe fuer die Koordinaten.");
+        deText.add(8, "Feld ist schon besetzt waehlen Sie ein anderes.");
 
         enText.add(0, "Welcome to the game tic-tac-toe from group 3. \n" +
             "You can change the language to German at any time with: 'wechsleSprache.'\n" +

@@ -1,7 +1,7 @@
 
 /**
  * In der Klasse TicTacToeGame wird gespielt.
- * Hier sind x Methoden um ein Spiel zu simulieren.
+ * Hier sind 3 Methoden um ein Spiel zu simulieren.
  * 
  * @author sadikdur, jasard, schieph1
  * @version 1
@@ -17,10 +17,9 @@ public class TicTacToeGame
      * Stellt das Spielfeld auf
      */
     public TicTacToeGame(){
-        start();
     }
 
-    private void start(){
+    public void start(){
         spielFeld = new Spielfeld();
         sprache = new Sprachen();
         spielLogik = new Spiellogik(spielFeld, sprache);
@@ -29,11 +28,12 @@ public class TicTacToeGame
     }
     
     /**
-     * Führt eine bestimmte Anzahl von Spielzügen aus und
+     * Führt eine bestimmte Anzahl von Spielzuegen aus und
      * wechselt die Sprache.
      */
     public void spielUnentschieden()
     {
+        start();
         spielLogik.feldSetzen("x1");
         spielLogik.feldSetzen("y2");
         sprache.wechsleSprache();
@@ -55,6 +55,7 @@ public class TicTacToeGame
      */
     public void spielGewonnen1()
     {
+        start();
         spielLogik.feldSetzen("y2");
         spielLogik.feldSetzen("x3");
         spielLogik.feldSetzen("x15");
@@ -66,12 +67,22 @@ public class TicTacToeGame
         spielLogik.feldSetzen("y3");
     }
 
-    /**
-     * Methode setzt alle Felder auf 0.
-     */
-    public void reset()
+    public void spielGewonnen2()
     {
-        spielFeld.reset();
-        //Spielgewonnen?
+        start();
+        spielLogik.feldSetzen("y2");
+        sprache.wechsleSprache();
+        spielLogik.feldSetzen("");
+        spielLogik.feldSetzen("x1");
+        spielLogik.feldSetzen("y1");
+        spielLogik.feldSetzen("y3");
+        sprache.wechsleSprache();
+        spielLogik.feldSetzen("z1");
+        spielLogik.feldSetzen("a45");
+        spielLogik.feldSetzen("y3");
+        spielLogik.feldSetzen("x3");
+        spielLogik.feldSetzen("z2");
+        spielLogik.feldSetzen("x2");
+        spielLogik.feldSetzen("z3");
     }
 }

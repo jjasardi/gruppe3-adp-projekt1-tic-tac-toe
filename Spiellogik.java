@@ -1,6 +1,6 @@
 /**
  * In der Klasse Spiellogik wird geprüft ob Operationen regelkonform sind.
- * Hier wird 
+ * Hier wird der Spielerzug gewechselt und entschieden ob das Spiel zu Ende ist. 
  * 
  * @author sadikdur, jasard, schieph1
  * @version 1
@@ -14,9 +14,9 @@ public class Spiellogik
     private boolean spielBeendet;
 
     /**
-     * Der Konstruktor lädt zwei Objekte aus anderen Klassen
-     * @param spielFeld ?
-     * @param sprache ?
+     * Der Konstruktor definiert die Standardwerte.
+     * @param spielFeld ist der Parameter der dem Objekt SpielFeld in TicTacToeGame zugewiesen ist.
+     * @param sprache ist der Parameter der dem Objekt sprache in TicTacToeGame zugewiesen ist.
      */
     public Spiellogik(Spielfeld spielFeld, Sprachen sprache)
     {
@@ -29,7 +29,7 @@ public class Spiellogik
     /**
      * Diese Methode wechselt zwischen Spieler 1 und 2 und gibt eine entsprechende Aussage.
      */
-    public void spielerWechsel()
+    private void spielerWechsel()
     {
         if (aktuellerSpieler == 1){
             aktuellerSpieler = 2;
@@ -57,6 +57,7 @@ public class Spiellogik
             System.out.println(sprache.getText(7));
         }
         else{
+            if (spielBeendet == false) {
             spielFeld.feldEingeben(feldId, aktuellerSpieler);
             spielFeld.spielDarstellung();
             if(spielGewonnen()){
@@ -67,6 +68,7 @@ public class Spiellogik
                     System.out.println(sprache.getText(4));
                 }
                 spielBeendet = true;
+            }
             }
             else if (spielUnentschieden()){
                 System.out.println(sprache.getText(5));
