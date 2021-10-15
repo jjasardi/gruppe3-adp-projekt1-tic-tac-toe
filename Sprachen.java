@@ -1,33 +1,35 @@
 import java.util.ArrayList;
+
 /**
- * Die Klasse Sprache bildet eine Sammlung mit den Ausgabestrings in Deutsch und Englisch.
+ * Die Klasse Sprache bildet eine Sammlung mit den Ausgabestrings in Deutsch und
+ * Englisch.
  * 
  * @author sadikdur, jasard, schieph1
  * @version 1
  */
-public class Sprachen
-{
+public class Sprachen {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private String sprache;
     private ArrayList<String> deText;
     private ArrayList<String> enText;
 
     /**
-     * Konstruktor definiert Standardsprache, erstellt zwei neue Objekte und fuellt diese.
+     * Konstruktor definiert Standardsprache, erstellt zwei neue Objekte und fuellt
+     * diese.
      */
-    public Sprachen()
-    {
+    public Sprachen() {
         sprache = "DE";
         deText = new ArrayList<>();
         enText = new ArrayList<>();
-        setArrayLists();        
+        setArrayLists();
     }
 
     /**
-     * Sprache wird zwischen Deutsch und Englisch gewechselt, gibt entsprechende Aussage.
+     * Sprache wird zwischen Deutsch und Englisch gewechselt, gibt entsprechende
+     * Aussage.
      */
-    public void wechsleSprache(){
-        if(sprache == "DE") {
+    public void wechsleSprache() {
+        if (sprache == "DE") {
             sprache = "EN";
         } else {
             sprache = "DE";
@@ -37,14 +39,15 @@ public class Sprachen
 
     /**
      * Ruft Zeile aus der Sammlung.
+     * 
      * @param textIndex indexwert der sammlung
      * @return get methode fuer die englische oder deutsche Sammlung.
      */
-    public String getText(int textIndex){
+    public String getText(int textIndex) {
         String text = null;
-        if (sprache == "DE"){
+        if (sprache == "DE") {
             text = deText.get(textIndex);
-        } else if (sprache == "EN"){
+        } else if (sprache == "EN") {
             text = enText.get(textIndex);
         }
 

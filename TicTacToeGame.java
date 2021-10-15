@@ -1,14 +1,13 @@
 
 /**
- * In der Klasse TicTacToeGame wird gespielt.
- * Hier sind 3 Methoden um ein Spiel zu simulieren.
+ * In der Klasse TicTacToeGame wird gespielt. Hier sind 3 Methoden um ein Spiel
+ * zu simulieren.
  * 
  * @author sadikdur, jasard, schieph1
  * @version 1
  */
 
-public class TicTacToeGame
-{
+public class TicTacToeGame {
     private Spiellogik spielLogik;
     private Spielfeld spielFeld;
     private Sprachen sprache;
@@ -16,13 +15,14 @@ public class TicTacToeGame
     /**
      * Leerer Konstruktor.
      */
-    public TicTacToeGame(){
+    public TicTacToeGame() {
     }
 
     /**
-     * Die Methode erstellt 3 neue Objekte und gibt zwei Ausgaben (Willkomensnachricht und welcher Spieler am Zug ist) aus 
+     * Die Methode erstellt 3 neue Objekte und gibt zwei Ausgaben
+     * (Willkomensnachricht und welcher Spieler am Zug ist) aus
      */
-    private void start(){
+    private void start() {
         spielFeld = new Spielfeld();
         sprache = new Sprachen();
         spielLogik = new Spiellogik(spielFeld, sprache);
@@ -31,11 +31,9 @@ public class TicTacToeGame
     }
 
     /**
-     * Fuehrt eine bestimmte Anzahl von Spielzuegen aus und
-     * wechselt die Sprache.
+     * Fuehrt eine bestimmte Anzahl von Spielzuegen aus und wechselt die Sprache.
      */
-    public void spielUnentschieden()
-    {
+    public void spielUnentschieden() {
         start();
         spielLogik.feldSetzen("x1");
         spielLogik.feldSetzen("y2");
@@ -53,11 +51,9 @@ public class TicTacToeGame
     }
 
     /**
-     * Fuehrt eine bestimmte Anzahl von Spielzuegen aus und
-     * wechselt die Sprache.
+     * Fuehrt eine bestimmte Anzahl von Spielzuegen aus und wechselt die Sprache.
      */
-    public void spieler1Gewinnt()
-    {
+    public void spieler1Gewinnt() {
         start();
         spielLogik.feldSetzen("y2");
         spielLogik.feldSetzen("x3");
@@ -72,11 +68,9 @@ public class TicTacToeGame
     }
 
     /**
-     * Fuehrt eine bestimmte Anzahl von Spielzuegen aus und
-     * wechselt die Sprache.
+     * Fuehrt eine bestimmte Anzahl von Spielzuegen aus und wechselt die Sprache.
      */
-    public void spieler2Gewinnt()
-    {
+    public void spieler2Gewinnt() {
         start();
         spielLogik.feldSetzen("y2");
         sprache.wechsleSprache();
@@ -91,7 +85,7 @@ public class TicTacToeGame
         spielLogik.feldSetzen("x3");
         spielLogik.feldSetzen("z2");
         spielLogik.feldSetzen("x2");
-                
+
         spielLogik.feldSetzen("z3");
         spielLogik.feldSetzen("y3");
         spielLogik.feldSetzen("y3");
