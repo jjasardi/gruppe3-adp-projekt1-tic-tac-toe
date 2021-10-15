@@ -85,7 +85,7 @@ public class TicTacToeGame {
         spielLogik.feldSetzen("x3");
         spielLogik.feldSetzen("z2");
         spielLogik.feldSetzen("x2");
-
+        //Zusaetliche Eingaben zur Demonstration der Logik nach Spielbeendung       
         spielLogik.feldSetzen("z3");
         spielLogik.feldSetzen("y3");
         spielLogik.feldSetzen("y3");
