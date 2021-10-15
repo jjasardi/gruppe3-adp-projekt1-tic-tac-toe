@@ -29,7 +29,7 @@ public class TicTacToeGame
         System.out.println(sprache.getText(0));
         System.out.println(sprache.getText(1));
     }
-    
+
     /**
      * Führt eine bestimmte Anzahl von Spielzuegen aus und
      * wechselt die Sprache.

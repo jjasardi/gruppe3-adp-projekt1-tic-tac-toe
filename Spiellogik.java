@@ -60,26 +60,27 @@ public class Spiellogik
             if (spielBeendet == false) {
                 spielFeld.feldEingeben(feldId, aktuellerSpieler);
                 spielFeld.spielDarstellung();
-            }
-            if(spielGewonnen()){
-                if (aktuellerSpieler == 1){
-                    System.out.println(sprache.getText(3));
+
+                if(spielGewonnen()){
+                    if (aktuellerSpieler == 1){
+                        System.out.println(sprache.getText(3));
+                    }
+                    else{
+                        System.out.println(sprache.getText(4));
+                    }
+                    spielBeendet = true;
                 }
-                else{
-                    System.out.println(sprache.getText(4));
+                else if (spielUnentschieden()){
+                    System.out.println(sprache.getText(5));
+                    spielBeendet = true;
                 }
-                spielBeendet = true;
+                if (!spielBeendet){
+                    spielerWechsel();
+                }
             }
-            else if (spielUnentschieden()){
-                System.out.println(sprache.getText(5));
-                spielBeendet = true;
-            }
-            if (!spielBeendet){
-                spielerWechsel();
-            }   
         }
     }
-    
+
     /**
      * Ueberprüft ob ein Spiel unentschieden ist.
      */
