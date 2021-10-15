@@ -74,7 +74,7 @@ public class Spiellogik
                     System.out.println(sprache.getText(5));
                     spielBeendet = true;
                 }
-                if (!spielBeendet){
+                else {
                     spielerWechsel();
                 }
             }
