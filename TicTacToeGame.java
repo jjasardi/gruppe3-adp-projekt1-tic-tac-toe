@@ -1,7 +1,7 @@
 
 /**
- * In der Klasse TicTacToeGame wird gespielt. Hier sind 3 Methoden um ein Spiel
- * zu simulieren.
+ * In der Klasse TicTacToeGame wird gespielt. 
+ * Hier sind 3 Methoden um ein Spiel zu simulieren.
  * 
  * @author sadikdur, jasard, schieph1
  * @version 1

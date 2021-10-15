@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 /**
- * Die Klasse Sprache bildet eine Sammlung mit den Ausgabestrings in Deutsch und
- * Englisch.
+ * Die Klasse Sprache bildet eine Sammlung mit den Ausgabestrings
+ * in Deutsch und Englisch.
  * 
  * @author sadikdur, jasard, schieph1
  * @version 1
@@ -14,8 +14,8 @@ public class Sprachen {
     private ArrayList<String> enText;
 
     /**
-     * Konstruktor definiert Standardsprache, erstellt zwei neue Objekte und fuellt
-     * diese.
+     * Konstruktor definiert Standardsprache, 
+     * erstellt zwei neue Objekte und fuellt diese.
      */
     public Sprachen() {
         sprache = "DE";
@@ -25,8 +25,8 @@ public class Sprachen {
     }
 
     /**
-     * Sprache wird zwischen Deutsch und Englisch gewechselt, gibt entsprechende
-     * Aussage.
+     * Sprache wird zwischen Deutsch und Englisch gewechselt, 
+     * gibt entsprechende Aussage.
      */
     public void wechsleSprache() {
         if (sprache == "DE") {
