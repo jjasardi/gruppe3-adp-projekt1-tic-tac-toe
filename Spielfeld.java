@@ -5,10 +5,10 @@
  * String ist Zeile und int die Spalte.
  * 
  *          x1 | x2 | x3 
------------- 
-y1 | y2 | y3 
------------- 
-z1 | z2 | z3 
+ *          ------------ 
+ *          y1 | y2 | y3 
+ *          ------------ 
+ *          z1 | z2 | z3 
  * 
  * @author sadikdur, jasard, schieph1
  * @version 1
